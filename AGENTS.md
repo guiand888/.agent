@@ -26,6 +26,7 @@ Before starting any task, locate the relevant standards using this hierarchy:
 - **Silent Discovery**: Do not ask for permission to read these files; proactively check them when entering a relevant file scope.
 - **Consistency**: All generated code must pass the validation checks defined in the respective rule files.
 - **Author Metadata**: Author information is defined in `.agent/AUTHORS.md` (external, not in Git).
+- **No AI Attribution**: Do not include AI as author or co-author in any commit or authorship metadata.
 
 ---
-*Last Updated: 2026-05-25*
+*Last Updated: 2026-07-01*

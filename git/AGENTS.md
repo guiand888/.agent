@@ -20,3 +20,4 @@ All Git operations, branching, merging, and repository management.
 - Use monorepos
 - Make direct commits to main branch
 - Include AI attribution in commit messages
+- Include AI as co-author
