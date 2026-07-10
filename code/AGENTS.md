@@ -18,6 +18,7 @@ Naming, structure, documentation, and maintainability.
 - Document behaviors using accessible syntax
 - Maintain clear README files
 - Use inline comments only for complex logic
+- Record verified assumptions inline: when a decision relies on confirmed (not assumed) behavior of an external system (API, library, service), comment what was verified and how, so other agents don't redundantly re-verify it
 - Keep documentation tight and actionable
 
 ### Never
