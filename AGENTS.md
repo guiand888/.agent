@@ -27,7 +27,7 @@ Before starting any task, locate the relevant standards using this hierarchy:
 - **Consistency**: All generated code must pass the validation checks defined in the respective rule files.
 - **Author Metadata**: Author information is defined in `.agent/AUTHORS.md` (external, not in Git).
 - **No AI Attribution**: Do not include AI as author or co-author in any commit or authorship metadata.
-- **Sandboxed Execution**: If a Nix flake (`flake.nix`) exists at the repo root, run tests and the app via `nix develop` (e.g. `nix develop -c <command>`), unless explicitly instructed otherwise. Never install dependencies on the bare-metal OS — this keeps the host environment unpolluted.
+- **Sandboxed Execution**: If a Nix flake (`flake.nix`) exists at the repo root, run every command that touches project dependencies — tests, builds, running the app, linting, and any package-manager invocation (e.g. `npm`, `pip`, `cargo`, `go`, `apt`, `brew`) — through `nix develop` (e.g. `nix develop -c <command>`), unless explicitly instructed otherwise. Never install packages, modules, or other dependencies directly on the bare-metal host OS — all dependency installation must happen inside the Nix shell/flake environment, so the host stays unpolluted and the environment stays reproducible.
 
 ---
 *Last Updated: 2026-07-11*
