@@ -15,6 +15,7 @@ TDD, BDD, test automation, and validation.
 - Use Gherkin syntax (Given-When-Then) for BDD scenarios
 - Cover unit and integration levels
 - Write acceptance criteria before development
+- Run tests via `nix develop` when a `flake.nix` is present at the repo root (see root `AGENTS.md`), instead of installing dependencies on the bare-metal OS
 
 ### Never
 - Skip test automation
