@@ -1,0 +1,7 @@
+{
+  "setup": [
+    "export HISTFILE=/dev/null"
+  ],
+  "teardown": [],
+  "run": []
+}

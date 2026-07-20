@@ -1,22 +1,22 @@
-# .agent/ Specification
+# .agents/ Specification
 
-This file defines how to write, organize, and maintain `.md` instruction files within the `.agent/` directory.
+This file defines how to write, organize, and maintain `.md` instruction files within the `.agents/` directory.
 
 ---
 
 ## Purpose
 
-The `.agent/` directory contains machine-readable instruction files that guide AI agents in their workflows. This specification ensures consistency, maintainability, and effectiveness across all agent instruction files.
+The `.agents/` directory contains machine-readable instruction files that guide AI agents in their workflows. This specification ensures consistency, maintainability, and effectiveness across all agent instruction files.
 
 ---
 
 ## Directory Structure
 
 ```
-.agent/
+.agents/
 ├── AGENTS.md          # Root index (routes to correct file)
 └── meta/
-    └── SPEC.md         # This file (specification for .agent/)
+    └── SPEC.md         # This file (specification for .agents/)
 
 # Additional scope folders may exist:
 # └── <scope>/
@@ -29,8 +29,8 @@ The `.agent/` directory contains machine-readable instruction files that guide A
 
 | Scope | Directory | Purpose |
 |-------|-----------|---------|
-| Root | `.agent/AGENTS.md` | Index/router - directs to correct file |
-| Meta | `meta/` | Specification for `.agent/` directory files (this file) |
+| Root | `.agents/AGENTS.md` | Index/router - directs to correct file |
+| Meta | `meta/` | Specification for `.agents/` directory files (this file) |
 | Custom | `<scope>/` | Any scope-specific agent rules |
 
 ---
@@ -38,7 +38,7 @@ The `.agent/` directory contains machine-readable instruction files that guide A
 ## File Naming Rules
 
 - **Instruction files in scope folders**: **Always** use `AGENTS.md` (tool compatibility)
-- **This specification file**: `SPEC.md` (distinguishes it as meta-documentation for `.agent/`)
+- **This specification file**: `SPEC.md` (distinguishes it as meta-documentation for `.agents/`)
 - **Directory names**: lowercase, descriptive, singular or plural as appropriate
 
 ---
@@ -73,8 +73,8 @@ Create a new `<scope>/` folder with AGENTS.md when:
 ### When to Update meta/SPEC.md
 
 Update this file when:
-- The standard for writing `.agent/` files changes
-- New content patterns emerge for `.agent/` directory
+- The standard for writing `.agents/` files changes
+- New content patterns emerge for `.agents/` directory
 - The directory structure convention evolves
 
 ---
@@ -89,7 +89,7 @@ Update this file when:
 - **Quarterly** - Review all files for relevance
 
 ### Root Index Maintenance
-- Always update `.agent/AGENTS.md` when adding or removing scope folders
+- Always update `.agents/AGENTS.md` when adding or removing scope folders
 
 ### Versioning
 
@@ -109,20 +109,20 @@ Update this file when:
 
 Agents load files in this order (later overrides earlier):
 
-1. `.agent/AGENTS.md` (root router - always checked first)
-2. `.agent/<current-scope>/AGENTS.md` (if in a scope folder)
-3. `.agent/meta/SPEC.md` (this specification - fallback for `.agent/` files)
+1. `.agents/AGENTS.md` (root router - always checked first)
+2. `.agents/<current-scope>/AGENTS.md` (if in a scope folder)
+3. `.agents/meta/SPEC.md` (this specification - fallback for `.agents/` files)
 
 **Rule**: More specific context overrides more general context.
 
 ---
 
-## Creating New Files in .agent/
+## Creating New Files in .agents/
 
 ### Decision Flow
 
 ```
-Is this about how to write/organize files within .agent/?
+Is this about how to write/organize files within .agents/?
 ├── Yes → meta/SPEC.md (update this file)
 
 Is this scope-specific agent rules?

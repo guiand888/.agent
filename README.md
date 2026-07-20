@@ -1,4 +1,4 @@
-# .agent
+# .agents
 
 Centralized AI Agent Instructions and Development Standards.
 
@@ -13,8 +13,8 @@ Implements the [`AGENTS.md`](https://agents.md) standard as modular system.
 ## Usage
 
 ```sh
-git submodule add https://github.com/guiand888/.agent.git .agent/   # copy/subtree also work
-cp .agent/AGENTS.md AGENTS.md
+git submodule add https://github.com/guiand888/.agents.git .agents/   # copy/subtree also work
+cp .agents/AGENTS.md AGENTS.md
 ```
 
 Agents look for `AGENTS.md` at the project root first. Copying it there ensures they find the routing table immediately, without traversing the submodule.
